@@ -1,0 +1,154 @@
+@import "./color";
+@import "./mixin";
+@import "./_btns.scss";
+.landing-sec {
+    position: relative;
+    background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+    height: 100vh;
+    overflow-x: hidden;
+    .container {
+        background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+        padding: 100px 160.09px 102.31px 170px;
+    }
+    .row {
+        flex-direction: row;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+
+        .col-1 {
+            order: 1;
+        }
+        .col-2 {
+            order: 2;
+        }
+
+        .event-image {
+            display: inline-block;
+            background: url(../assets/images/banner.svg);
+            width: 440px;
+            height: 775.69px;
+            background-repeat: no-repeat;
+        }
+
+        h2 {
+            @include heading("Helvetica", normal, 700, 64px, 64px, right, $purple);
+            max-width: 354px;
+            margin: 0 0 0 auto;
+            span {
+                background: linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+        p {
+            @include heading("Helvetica", normal, 300, 24px, 28px, right, $grey);
+            max-width: 521px;
+            margin-top: 16px;
+        }
+
+        .smaller-btn {
+            display: none;
+        }
+    }
+}
+
+// media queries for ipad
+@media only screen and (max-width: 960px) {
+    .landing-sec {
+        height: 100vh;
+        .container {
+            padding: 60px 40px 25.67px;
+        }
+        .row {
+            display: block;
+            h2 {
+                text-align: center;
+                margin: auto;
+            }
+            p {
+                text-align: center;
+                margin: 16px auto auto;
+            }
+            .actions.desktop-btn {
+                display: none;
+            }
+            .event-image {
+                display: block;
+                background: url(../assets/images/banner-m.svg);
+                height: 548.27px;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 55px auto auto;
+            }
+            .smaller-btn {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                .primary_btn {
+                    float: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .landing-sec {
+        .container {
+            .row {
+                .event-image {
+                    display: inline-block;
+                    width: 360px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .landing-sec {
+        height: 100vh;
+        .container {
+            padding: 94px 46px 13.67px;
+        }
+        .row {
+            display: block;
+            h2 {
+                @include heading("Helvetica", normal, 700, 36px, 36px, center, $purple);
+                margin: auto;
+            }
+            p {
+                @include heading("Helvetica", normal, 300, 16px, 18px, center, $grey);
+                margin: 16px auto auto;
+            }
+            .actions.desktop-btn {
+                display: none;
+            }
+            .event-image {
+                display: block !important;
+                background: url(../assets/images/banner-s.svg);
+                height: 292.27px;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 36px auto auto;
+                width: auto !important;
+            }
+            .smaller-btn {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+
+                .primary_btn {
+                    float: none;
+                    margin-top: 34px;
+                    width: 187px;
+                    padding: 16px 10px;
+                    @include heading("Helvetica", normal, 700, 16px, 18px, center, $white);
+                }
+            }
+        }
+    }
+}

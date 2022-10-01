@@ -1,0 +1,163 @@
+@import "./color";
+@import "./mixin";
+@import "./_btns.scss";
+.create-sec {
+    position: relative;
+    background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+    height: 100vh;
+    overflow-x: hidden;
+    .container {
+        background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+        padding: 5% 20%;
+    }
+    .col {
+        transition: all 0.2s ease-in-out;
+        border-radius: 8px;
+        background: #fff;
+        border: 1px solid #eaeff5;
+        padding: 40px;
+        box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
+        max-width: 750px;
+        width: 100%;
+        margin: auto;
+    }
+    h2 {
+        @include heading("Helvetica", normal, 700, 64px, 64px, center, $purple);
+        margin: 0 0 0 auto;
+        span {
+            background: linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+    p {
+        @include heading("Helvetica", normal, 300, 24px, 28px, center, $grey);
+        max-width: 621px;
+        margin: auto;
+        margin-top: 16px;
+    }
+    form {
+        width: 500px;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .input_field {
+            width: 100%;
+            position: relative;
+            margin-bottom: 28px;
+            label {
+                font-size: 15px;
+                line-height: 12px;
+                letter-spacing: 0.0015em;
+                color: #7c7b8a;
+                font-weight: 700;
+                display: inline-block;
+                position: absolute;
+                background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+                left: 16px;
+                top: -5px;
+                padding: 0 2px;
+                z-index: 1;
+            }
+            input {
+                transition: all 0.2s ease-in-out;
+                border-radius: 8px;
+                background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+                width: 100%;
+                padding: 15px 18px;
+                border: 1px solid #e87bf83b;
+                &:focus {
+                    outline: none;
+                    border: 1px solid #8456ec;
+                }
+            }
+            .react-datetime-picker__wrapper {
+                transition: all 0.2s ease-in-out;
+                border-radius: 8px;
+                background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+                width: 538px;
+                padding: 8px 18px;
+                border: 1px solid #e87bf83b;
+                &:focus {
+                    outline: none;
+                    border: 1px solid #8456ec;
+                }
+                input {
+                    padding: 0px;
+                    border: none;
+                }
+            }
+        }
+        .upload_img_div {
+            margin-bottom: 30px;
+
+            .img_box_main_label {
+                border-radius: 8px;
+                border: 1px solid #e87bf83b;
+                position: relative;
+                margin: auto;
+                background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+                width: 498px;
+                padding: 8px 18px;
+
+                .file_upload_button {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    z-index: 9;
+                    position: absolute;
+                    bottom: 9px;
+                    right: 10px;
+                    top: auto;
+                    left: auto;
+
+                    .image-btn {
+                        display: none;
+                    }
+                    span {
+                        position: relative;
+
+                        input {
+                            z-index: 999;
+                            line-height: 0;
+                            font-size: 50px;
+                            position: absolute;
+                            top: -12px;
+                            left: -48px;
+                            opacity: 0;
+                            filter: alpha(opacity=0);
+                            -ms-filter: "alpha(opacity=0)";
+                            cursor: pointer;
+                            margin: 0;
+                            padding: 0;
+                            width: 36px;
+                            height: 36px;
+
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                .img_box {
+                    width: 158px;
+                    height: 158px;
+                    border-radius: 14px;
+                    -webkit-border-radius: 14px;
+                    -moz-border-radius: 14px;
+                    overflow: hidden;
+                    background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+                    border: 1px solid #eaeff5;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .action-btn {
+        text-align: center;
+    }
+}
