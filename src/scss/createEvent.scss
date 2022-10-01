@@ -22,7 +22,7 @@
         margin: auto;
     }
     h2 {
-        @include heading("Helvetica", normal, 700, 64px, 64px, center, $purple);
+        @include heading("Helvetica", normal, 700, 64px, 64px, left, $purple);
         margin: 0 0 0 auto;
         span {
             background: linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
@@ -33,14 +33,12 @@
         }
     }
     p {
-        @include heading("Helvetica", normal, 300, 24px, 28px, center, $grey);
+        @include heading("Helvetica", normal, 300, 24px, 28px, left, $grey);
         max-width: 621px;
-        margin: auto;
         margin-top: 16px;
     }
     form {
         width: 500px;
-        margin: auto;
         margin-top: 40px;
         margin-bottom: 40px;
         .input_field {
@@ -158,6 +156,6 @@
         }
     }
     .action-btn {
-        text-align: center;
+        text-align: left;
     }
 }
